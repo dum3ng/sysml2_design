@@ -75,12 +75,12 @@ package '需求' {
         requirement '价格' {
             doc /* 非经常费用和经常费用*/
             attribute nonRecurring : Real = 10000000;
-            attribute recurring = 3000000 [$/y];
+            attribute recurring : Real = 3000000[dollar / y];
         }
 
         requirement '进度' {
             doc /* 3年以内可运行*/
-            attribute operationDuration: TimeValue = 3 [y];
+            attribute operationDuration : TimeValue = 3[y];
         }
 
         requirement '风险' {
@@ -102,7 +102,20 @@ package '需求' {
         requirement '开发约束' {
             doc /* 无*/
         }
-
-
     }
+
+    requirement '轨道需求' {
+        requirement '轨道操作需求' {
+            requirement '轨道高度' {}
+            requirement '轨道平面' {}
+        }
+
+        requirement '脱离轨道需求' {}
+        requirement '转移轨道需求' {}
+    }
+
+    requirement '飞船数量' {}
+
+    requirement '再访问间隔' {}
+    requirement '运载火箭数量' {}
 }
