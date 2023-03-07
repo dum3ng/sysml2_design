@@ -1,8 +1,7 @@
 package '结构' {
     import ParametersOfInterestMetadata::moe;
     import 'dsl'::*;
-    alias '轨道$'
-        for dsl::'轨道';
+    import '飞船.黑盒规格.结构'::*;
 
     part def '任务上下文' {
         part earth : '地球';
@@ -52,25 +51,12 @@ package '结构' {
     }
 
     part def '发射运维设备' {}
-    part def '发射火箭' {}
-    #'感兴趣的系统' part def '飞船' {
-        ref part '轨道' : '轨道';
-    }
+    part def <LaunchVehicle> '发射火箭';
+
     part def '地面站' {}
-    part def '发射火箭' {}
     part def '中继卫星';
 
     // --others
-    #'轨道$' part def '轨道' {
-        attribute <eccentricity> '离心率';
-        attribute <semiMajorAxis> '半长轴';
-        attribute <inclination> '倾角';
-        attribute <rightAscensionOfAscendingNode> '升交点赤经';
-        attribute <argumentOfPeriapsis> '近心点角';
-        attribute <meanAnomalyAtEpoch> '历期平近点角';
-        attribute <percentTimeInEclipse> '月蚀晦暗期';
-        attribute <maxBetaAngel> '最大β角';
-    }
 
     part def 'GPS';
     part def '飞船环境' {}
