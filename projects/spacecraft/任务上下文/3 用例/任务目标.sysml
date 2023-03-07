@@ -1,4 +1,4 @@
-package '用例' {
+package '用例.任务目标' {
     import '辅助元素.视角'::*;
     // usecase is case, and is requirement.
     use case <DetectAndMonitorForesetFireInUSAndCanada> '在美加探测和监控森林火灾' {
