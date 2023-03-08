@@ -13,4 +13,6 @@ package '辅助元素.数据' {
         attribute <percentTimeInEclipse> '月蚀晦暗期';
         attribute <maxBetaAngel> '最大β角';
     }
+
+    attribute def '电能';
 }

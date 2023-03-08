@@ -2,14 +2,23 @@ package '结构' {
     import ParametersOfInterestMetadata::moe;
     import 'dsl'::*;
     import '飞船.黑盒规格.结构'::*;
+    import '发射运维.结构'::*;
+    import '行为.执行任务'::*;
 
     part def '任务上下文' {
         part earth : '地球';
         part fd [*] : '消防部门';
-        part me : '任务企业';
+        part me : '任务企业' {
+            part :> sc {
+                perform  '星箭分离'.c;
+                perform  '星箭分离'.sendC;
+            }
+        }
         part gps [0..*] : GPS;
         part le : '发射环境';
         part se : '太空环境';
+
+        perform action '星箭分离' : '星箭分离';
     }
 
     part def '地球' {
@@ -50,7 +59,6 @@ package '结构' {
         part rs [0..*] : '中继卫星';
     }
 
-    part def '发射运维设备' {}
     part def <LaunchVehicle> '发射火箭';
 
     part def '地面站' {}
