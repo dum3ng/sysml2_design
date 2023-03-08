@@ -12,4 +12,13 @@ package '行为.执行任务' {
             send '飞船分离完成'(); // send an instance of '飞船分离完成'
             then done;
     }
+
+    action def '发射火箭' {
+        first start;
+        then fork fork1;
+        then action : '运输飞船';
+        then action : '控制飞船环境';
+        then action : '生成飞船电力';
+        then action : '和发射运维、飞船通信';
+    }
 }
