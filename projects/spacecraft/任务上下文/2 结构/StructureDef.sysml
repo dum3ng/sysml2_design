@@ -10,8 +10,8 @@ package '结构' {
         part fd [*] : '消防部门';
         part me : '任务企业' {
             part :> sc {
-                perform  '星箭分离'.c;
-                perform  '星箭分离'.sendC;
+                perform '星箭分离'.c;
+                perform '星箭分离'.sendC;
             }
         }
         part gps [0..*] : GPS;
@@ -61,8 +61,8 @@ package '结构' {
 
     part def <LaunchVehicle> '发射火箭';
 
-    part def '地面站' {}
-    part def '中继卫星';
+    part def <GroundStation> '地面站' {}
+    part def <RelaySatellite> '中继卫星';
 
     // --others
 
