@@ -1,5 +1,6 @@
 package 'dsl' {
     import Parts::*;
+    import Attributes::*;
     import Metaobjects::SemanticMetadata;
 
     enum def '开发状态' {
@@ -30,4 +31,8 @@ package 'dsl' {
     metadata def 'tpm' :> SemanticMetadata;
     metadata def '验证目标' :> SemanticMetadata;
     metadata def '违反' :> SemanticMetadata;
+
+    metadata def <tpm> '技术性能指标' :> SemanticMetadata {
+        baseType = attributeValues meta SysML::Usage;
+    }
 }
