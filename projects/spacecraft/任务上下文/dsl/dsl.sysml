@@ -18,15 +18,20 @@ package 'dsl' {
     metadata def '一般类别' :> SemanticMetadata;
     metadata def '硬件' :> SemanticMetadata {
         attribute '开发状态' : '开发状态';
+        baseType = parts meta SysML::Usage;
     }
     metadata def '逻辑' :> SemanticMetadata;
     metadata def '机械' :> SemanticMetadata;
     metadata def '轨道' :> SemanticMetadata {
         baseType = parts meta SysML::Usage;
     }
-    metadata def '软件' :> SemanticMetadata;
+    metadata def '软件' :> SemanticMetadata {
+        baseType = parts meta SysML::Usage;
+    }
     metadata def '存储' :> SemanticMetadata;
-    metadata def '子系统' :> SemanticMetadata;
+    metadata def '子系统' :> SemanticMetadata {
+        baseType = parts meta SysML::Usage;
+    }
     metadata def '测试组件' :> SemanticMetadata;
     metadata def 'tpm' :> SemanticMetadata;
     metadata def '验证目标' :> SemanticMetadata;
