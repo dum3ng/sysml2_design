@@ -33,7 +33,7 @@ package 'dsl' {
         baseType = parts meta SysML::Usage;
     }
     metadata def '测试组件' :> SemanticMetadata;
-    metadata def 'tpm' :> SemanticMetadata;
+    // metadata def 'tpm' :> SemanticMetadata;
     metadata def '验证目标' :> SemanticMetadata;
     metadata def '违反' :> SemanticMetadata;
 
