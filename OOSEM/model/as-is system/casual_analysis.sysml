@@ -1,5 +1,9 @@
-package CasualAnalyais {
+package CasualAnalysis {
     import CauseAndEffect::*;
+
+    /*
+     * the cause analysis may be visualized as a fishbone diagram.
+     */
 
     occurrence responseTime;
     occurrence falseAlarms;
